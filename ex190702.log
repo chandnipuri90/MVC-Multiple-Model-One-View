@@ -1,0 +1,36 @@
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2019-07-02 09:09:08
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2019-07-02 09:09:08 ::1 GET / - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 - 200 0 64 873698
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2019-07-02 09:27:22
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2019-07-02 09:27:22 ::1 GET / - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 - 200 0 0 25
+2019-07-02 09:27:22 ::1 GET /Scripts/jquery-3.3.1.js - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 304 0 0 158
+2019-07-02 09:27:22 ::1 GET /Content/bootstrap.css - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 304 0 0 116
+2019-07-02 09:27:22 ::1 GET /Scripts/bootstrap.js - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 304 0 0 172
+2019-07-02 09:27:22 ::1 GET /Content/site.css - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 304 0 0 116
+2019-07-02 09:27:22 ::1 GET /Scripts/modernizr-2.8.3.js - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 304 0 0 121
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2019-07-02 13:47:41
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2019-07-02 13:47:41 ::1 GET / - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 - 200 0 0 19181
+2019-07-02 13:48:30 ::1 GET /multimodel - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 200 0 0 1301
+2019-07-02 13:48:34 ::1 GET /multimodel/abc - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/multimodel 200 0 0 987
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2019-07-02 13:49:13
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2019-07-02 13:49:13 ::1 GET / - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 - 200 0 0 9055
+2019-07-02 13:49:16 ::1 GET /multimodel - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 200 0 0 700
+2019-07-02 13:49:19 ::1 GET /multimodel/abc - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/multimodel 200 0 0 809
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2019-07-02 13:53:10
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2019-07-02 13:53:10 ::1 GET / - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 - 200 0 0 3587
+2019-07-02 13:53:13 ::1 GET /multimodel - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/ 200 0 0 496
+2019-07-02 13:53:18 ::1 GET /multimodel/abc - 50473 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/75.0.3770.100+Safari/537.36 http://localhost:50473/multimodel 200 0 0 1339

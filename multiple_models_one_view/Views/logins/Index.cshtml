@@ -1,0 +1,69 @@
+﻿@model IEnumerable<multiple_models_one_view.model.login>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userpwd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birth_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usertype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userpwd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birth_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usertype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.login_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.login_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.login_id })
+        </td>
+    </tr>
+}
+
+</table>

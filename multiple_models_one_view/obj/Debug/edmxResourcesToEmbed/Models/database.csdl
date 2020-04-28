@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Two_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="depid" />
+    </Key>
+    <Property Name="depid" Type="Int32" Nullable="false" />
+    <Property Name="depname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="toilerid" Type="Int32" />
+    <NavigationProperty Name="toiler" Relationship="Self.FK__departmen__toile__239E4DCF" FromRole="department" ToRole="toiler" />
+  </EntityType>
+  <EntityType Name="toiler">
+    <Key>
+      <PropertyRef Name="toilerid" />
+    </Key>
+    <Property Name="toilerid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mobilenumber" Type="Int32" Nullable="false" />
+    <Property Name="emailid" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="departments" Relationship="Self.FK__departmen__toile__239E4DCF" FromRole="toiler" ToRole="department" />
+  </EntityType>
+  <Association Name="FK__departmen__toile__239E4DCF">
+    <End Role="toiler" Type="Self.toiler" Multiplicity="0..1" />
+    <End Role="department" Type="Self.department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="toiler">
+        <PropertyRef Name="toilerid" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="toilerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_CONTEXT" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="departments" EntityType="Self.department" />
+    <EntitySet Name="toilers" EntityType="Self.toiler" />
+    <AssociationSet Name="FK__departmen__toile__239E4DCF" Association="Self.FK__departmen__toile__239E4DCF">
+      <End Role="toiler" EntitySet="toilers" />
+      <End Role="department" EntitySet="departments" />
+    </AssociationSet>
+    <EntitySet Name="Cricketer_IPL_Statstics" EntityType="Two_Model.Cricketer_IPL_Statstics" />
+    <EntitySet Name="Customers" EntityType="Two_Model.Customer" />
+  </EntityContainer>
+  <EntityType Name="Cricketer_IPL_Statstics">
+    <Key>
+      <PropertyRef Name="IPL_Id" />
+    </Key>
+    <Property Name="IPL_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Team_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="IPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

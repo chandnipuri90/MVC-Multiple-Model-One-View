@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Two_ModelStoreContainer" CdmEntityContainer="DB_CONTEXT">
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="IsTypeOf(Two_Model.department)">
+        <MappingFragment StoreEntitySet="departments">
+          <ScalarProperty Name="depid" ColumnName="depid" />
+          <ScalarProperty Name="depname" ColumnName="depname" />
+          <ScalarProperty Name="toilerid" ColumnName="toilerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toilers">
+      <EntityTypeMapping TypeName="IsTypeOf(Two_Model.toiler)">
+        <MappingFragment StoreEntitySet="toilers">
+          <ScalarProperty Name="toilerid" ColumnName="toilerid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mobilenumber" ColumnName="mobilenumber" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cricketer_IPL_Statstics">
+      <EntityTypeMapping TypeName="IsTypeOf(Two_Model.Cricketer_IPL_Statstics)">
+        <MappingFragment StoreEntitySet="Cricketer_IPL_Statstics">
+          <ScalarProperty Name="IPL_Id" ColumnName="IPL_Id" />
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IsTypeOf(Two_Model.Customer)">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

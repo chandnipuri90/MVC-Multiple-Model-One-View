@@ -1,0 +1,38 @@
+﻿@model multiple_models_one_view.model.ViewModel
+@{
+    ViewBag.Title = "abc";
+}
+
+<h2>Access Two Models "Customer" and "Login" in one View "abc "</h2>
+<div><th>
+    Customer table Info--------------------
+    </th>
+    <tr>
+        <td>
+            @Html.DisplayFor(m => m.customermodel.FirstName);
+
+        </td>
+    <tr>
+        <td>
+            @Html.DisplayFor(m => m.customermodel.Email);
+
+        </td>
+    </tr>
+</div>
+<div></div>
+<div>
+    <th>
+        Login table Info------------------
+    </th>
+    <tr>
+        <td>
+            @Html.DisplayFor(m => m.loginmodel.username);
+        </td>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(m => m.loginmodel.Usertype);
+        </td>
+    </tr>
+</div>
+

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="multimodelStoreContainer" CdmEntityContainer="db_context">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="multimodel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cricketer_Details">
+      <EntityTypeMapping TypeName="multimodel.Cricketer_Details">
+        <MappingFragment StoreEntitySet="Cricketer_Details">
+          <ScalarProperty Name="Details_ID" ColumnName="Details_ID" />
+          <ScalarProperty Name="Cricketer_ID" ColumnName="Cricketer_ID" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="ODI_Runs" ColumnName="ODI_Runs" />
+          <ScalarProperty Name="Test_Runs" ColumnName="Test_Runs" />
+          <ScalarProperty Name="Wickets" ColumnName="Wickets" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cricketer_IPL_Statstics">
+      <EntityTypeMapping TypeName="multimodel.Cricketer_IPL_Statstics">
+        <MappingFragment StoreEntitySet="Cricketer_IPL_Statstics">
+          <ScalarProperty Name="IPL_Id" ColumnName="IPL_Id" />
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cricketer_ODI_Statistics">
+      <EntityTypeMapping TypeName="multimodel.Cricketer_ODI_Statistics">
+        <MappingFragment StoreEntitySet="Cricketer_ODI_Statistics">
+          <ScalarProperty Name="ODI_ID" ColumnName="ODI_ID" />
+          <ScalarProperty Name="Cricketer_ID" ColumnName="Cricketer_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Half_Century" ColumnName="Half_Century" />
+          <ScalarProperty Name="Century" ColumnName="Century" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cricketer_Test_Statistics">
+      <EntityTypeMapping TypeName="multimodel.Cricketer_Test_Statistics">
+        <MappingFragment StoreEntitySet="Cricketer_Test_Statistics">
+          <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+          <ScalarProperty Name="Cricketer_ID" ColumnName="Cricketer_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Half_Century" ColumnName="Half_Century" />
+          <ScalarProperty Name="Century" ColumnName="Century" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cricketers">
+      <EntityTypeMapping TypeName="multimodel.Cricketer">
+        <MappingFragment StoreEntitySet="Cricketers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ODI" ColumnName="ODI" />
+          <ScalarProperty Name="Test" ColumnName="Test" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="multimodel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="multimodel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="depid" ColumnName="depid" />
+          <ScalarProperty Name="depname" ColumnName="depname" />
+          <ScalarProperty Name="toilerid" ColumnName="toilerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="multimodel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userpwd" ColumnName="userpwd" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth_Date" />
+          <ScalarProperty Name="Usertype" ColumnName="Usertype" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toilers">
+      <EntityTypeMapping TypeName="multimodel.toiler">
+        <MappingFragment StoreEntitySet="toiler">
+          <ScalarProperty Name="toilerid" ColumnName="toilerid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mobilenumber" ColumnName="mobilenumber" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

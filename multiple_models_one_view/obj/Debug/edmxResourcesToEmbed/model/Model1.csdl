@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="multimodel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cricketer_Details">
+    <Key>
+      <PropertyRef Name="Details_ID" />
+    </Key>
+    <Property Name="Details_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cricketer_ID" Type="Int32" />
+    <Property Name="Team" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ODI_Runs" Type="Int32" />
+    <Property Name="Test_Runs" Type="Int32" />
+    <Property Name="Wickets" Type="Int32" />
+    <NavigationProperty Name="Cricketer" Relationship="Self.FK__Cricketer__Crick__3E52440B" FromRole="Cricketer_Details" ToRole="Cricketers" />
+  </EntityType>
+  <EntityType Name="Cricketer_IPL_Statstics">
+    <Key>
+      <PropertyRef Name="IPL_Id" />
+    </Key>
+    <Property Name="IPL_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Team_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" />
+    <NavigationProperty Name="Cricketer" Relationship="Self.FK__Cricketer_IP__ID__440B1D61" FromRole="Cricketer_IPL_Statstics" ToRole="Cricketers" />
+  </EntityType>
+  <EntityType Name="Cricketer_ODI_Statistics">
+    <Key>
+      <PropertyRef Name="ODI_ID" />
+    </Key>
+    <Property Name="ODI_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cricketer_ID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Half_Century" Type="Int32" />
+    <Property Name="Century" Type="Int32" />
+    <NavigationProperty Name="Cricketer" Relationship="Self.FK__Cricketer__Crick__38996AB5" FromRole="Cricketer_ODI_Statistics" ToRole="Cricketers" />
+  </EntityType>
+  <EntityType Name="Cricketer_Test_Statistics">
+    <Key>
+      <PropertyRef Name="Test_ID" />
+    </Key>
+    <Property Name="Test_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cricketer_ID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Half_Century" Type="Int32" />
+    <Property Name="Century" Type="Int32" />
+    <NavigationProperty Name="Cricketer" Relationship="Self.FK__Cricketer__Crick__3B75D760" FromRole="Cricketer_Test_Statistics" ToRole="Cricketers" />
+  </EntityType>
+  <EntityType Name="Cricketer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ODI" Type="Int32" />
+    <Property Name="Test" Type="Int32" />
+    <NavigationProperty Name="Cricketer_Details" Relationship="Self.FK__Cricketer__Crick__3E52440B" FromRole="Cricketers" ToRole="Cricketer_Details" />
+    <NavigationProperty Name="Cricketer_IPL_Statstics" Relationship="Self.FK__Cricketer_IP__ID__440B1D61" FromRole="Cricketers" ToRole="Cricketer_IPL_Statstics" />
+    <NavigationProperty Name="Cricketer_ODI_Statistics" Relationship="Self.FK__Cricketer__Crick__38996AB5" FromRole="Cricketers" ToRole="Cricketer_ODI_Statistics" />
+    <NavigationProperty Name="Cricketer_Test_Statistics" Relationship="Self.FK__Cricketer__Crick__3B75D760" FromRole="Cricketers" ToRole="Cricketer_Test_Statistics" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="IPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="depid" />
+    </Key>
+    <Property Name="depid" Type="Int32" Nullable="false" />
+    <Property Name="depname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="toilerid" Type="Int32" />
+    <NavigationProperty Name="toiler" Relationship="Self.FK__departmen__toile__239E4DCF" FromRole="department" ToRole="toiler" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="login_id" />
+    </Key>
+    <Property Name="login_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="userpwd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="First_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Birth_Date" Type="DateTime" Precision="3" />
+    <Property Name="Usertype" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="toiler">
+    <Key>
+      <PropertyRef Name="toilerid" />
+    </Key>
+    <Property Name="toilerid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mobilenumber" Type="Int32" Nullable="false" />
+    <Property Name="emailid" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="departments" Relationship="Self.FK__departmen__toile__239E4DCF" FromRole="toiler" ToRole="department" />
+  </EntityType>
+  <Association Name="FK__Cricketer__Crick__3E52440B">
+    <End Role="Cricketers" Type="Self.Cricketer" Multiplicity="0..1" />
+    <End Role="Cricketer_Details" Type="Self.Cricketer_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cricketers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cricketer_Details">
+        <PropertyRef Name="Cricketer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cricketer_IP__ID__440B1D61">
+    <End Role="Cricketers" Type="Self.Cricketer" Multiplicity="0..1" />
+    <End Role="Cricketer_IPL_Statstics" Type="Self.Cricketer_IPL_Statstics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cricketers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cricketer_IPL_Statstics">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cricketer__Crick__38996AB5">
+    <End Role="Cricketers" Type="Self.Cricketer" Multiplicity="0..1" />
+    <End Role="Cricketer_ODI_Statistics" Type="Self.Cricketer_ODI_Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cricketers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cricketer_ODI_Statistics">
+        <PropertyRef Name="Cricketer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cricketer__Crick__3B75D760">
+    <End Role="Cricketers" Type="Self.Cricketer" Multiplicity="0..1" />
+    <End Role="Cricketer_Test_Statistics" Type="Self.Cricketer_Test_Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cricketers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cricketer_Test_Statistics">
+        <PropertyRef Name="Cricketer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__departmen__toile__239E4DCF">
+    <End Role="toiler" Type="Self.toiler" Multiplicity="0..1" />
+    <End Role="department" Type="Self.department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="toiler">
+        <PropertyRef Name="toilerid" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="toilerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_context" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="Cricketer_Details" EntityType="Self.Cricketer_Details" />
+    <EntitySet Name="Cricketer_IPL_Statstics" EntityType="Self.Cricketer_IPL_Statstics" />
+    <EntitySet Name="Cricketer_ODI_Statistics" EntityType="Self.Cricketer_ODI_Statistics" />
+    <EntitySet Name="Cricketer_Test_Statistics" EntityType="Self.Cricketer_Test_Statistics" />
+    <EntitySet Name="Cricketers" EntityType="Self.Cricketer" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="departments" EntityType="Self.department" />
+    <EntitySet Name="logins" EntityType="Self.login" />
+    <EntitySet Name="toilers" EntityType="Self.toiler" />
+    <AssociationSet Name="FK__Cricketer__Crick__3E52440B" Association="Self.FK__Cricketer__Crick__3E52440B">
+      <End Role="Cricketers" EntitySet="Cricketers" />
+      <End Role="Cricketer_Details" EntitySet="Cricketer_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cricketer_IP__ID__440B1D61" Association="Self.FK__Cricketer_IP__ID__440B1D61">
+      <End Role="Cricketers" EntitySet="Cricketers" />
+      <End Role="Cricketer_IPL_Statstics" EntitySet="Cricketer_IPL_Statstics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cricketer__Crick__38996AB5" Association="Self.FK__Cricketer__Crick__38996AB5">
+      <End Role="Cricketers" EntitySet="Cricketers" />
+      <End Role="Cricketer_ODI_Statistics" EntitySet="Cricketer_ODI_Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cricketer__Crick__3B75D760" Association="Self.FK__Cricketer__Crick__3B75D760">
+      <End Role="Cricketers" EntitySet="Cricketers" />
+      <End Role="Cricketer_Test_Statistics" EntitySet="Cricketer_Test_Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__departmen__toile__239E4DCF" Association="Self.FK__departmen__toile__239E4DCF">
+      <End Role="toiler" EntitySet="toilers" />
+      <End Role="department" EntitySet="departments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

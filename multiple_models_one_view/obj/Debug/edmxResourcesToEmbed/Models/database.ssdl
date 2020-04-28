@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Two_Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Two_ModelStoreContainer">
+    <EntitySet Name="departments" EntityType="Two_Model.Store.departments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="toilers" EntityType="Two_Model.Store.toilers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cricketer_IPL_Statstics" EntityType="Two_Model.Store.Cricketer_IPL_Statstics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="Two_Model.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__departmen__toile__239E4DCF" Association="Two_Model.Store.FK__departmen__toile__239E4DCF">
+      <End Role="toiler" EntitySet="toilers" />
+      <End Role="department" EntitySet="departments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="departments">
+    <Key>
+      <PropertyRef Name="depid" />
+    </Key>
+    <Property Name="depid" Type="int" Nullable="false" />
+    <Property Name="depname" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="toilerid" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="toilers">
+    <Key>
+      <PropertyRef Name="toilerid" />
+    </Key>
+    <Property Name="toilerid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="mobilenumber" Type="int" Nullable="false" />
+    <Property Name="emailid" Type="varchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Cricketer_IPL_Statstics">
+    <Key>
+      <PropertyRef Name="IPL_Id" />
+    </Key>
+    <Property Name="IPL_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Team_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AddedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IPAddress" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobileNo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__departmen__toile__239E4DCF">
+    <End Role="toiler" Type="Two_Model.Store.toilers" Multiplicity="0..1" />
+    <End Role="department" Type="Two_Model.Store.departments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="toiler">
+        <PropertyRef Name="toilerid" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="toilerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
